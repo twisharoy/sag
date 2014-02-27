@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">startAsynchronousTest</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsNClN0cmlu
+ZyB0ZXN0TmFtZSA9IElEYXRhVXRpbC5nZXRTdHJpbmcoIHBpcGVsaW5lQ3Vyc29yLCAidGVzdE5h
+bWUiICk7DQpTdHJpbmcgZGVzY3JpcHRpb24gPSBJRGF0YVV0aWwuZ2V0U3RyaW5nKCBwaXBlbGlu
+ZUN1cnNvciwgImRlc2NyaXB0aW9uIiApOw0KaW50ICAgIGNvdW50ID0gSURhdGFVdGlsLmdldElu
+dCggcGlwZWxpbmVDdXJzb3IsICJjb3VudCIsIDEpOw0KaW50ICAgIHRpbWVvdXQgPSBJRGF0YVV0
+aWwuZ2V0SW50KCBwaXBlbGluZUN1cnNvciwgInRpbWVvdXQiLCAxMDAwICk7DQpwaXBlbGluZUN1
+cnNvci5kZXN0cm95KCk7DQoNCkFzeW5jaHJvbm91c0ludGVncmF0aW9uVGVzdCB0ZXN0ID0gbmV3
+IEFzeW5jaHJvbm91c0ludGVncmF0aW9uVGVzdCh0ZXN0TmFtZSwgZGVzY3JpcHRpb24sIGNvdW50
+LCB0aW1lb3V0LCBudWxsKTsNCkludGVncmF0aW9uVGVzdE1hcC5nZXRJbnN0YW5jZSgpLmFkZElu
+dGVncmF0aW9uVGVzdCh0ZXN0KTsKdGVzdC5zdGFydFRlc3QoKTsN</value>
+</Values>

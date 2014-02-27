@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">startSynchronousTest</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsNClN0cmlu
+ZyB0ZXN0TmFtZSA9IElEYXRhVXRpbC5nZXRTdHJpbmcoIHBpcGVsaW5lQ3Vyc29yLCAidGVzdE5h
+bWUiICk7DQpTdHJpbmcgZGVzY3JpcHRpb24gPSBJRGF0YVV0aWwuZ2V0U3RyaW5nKCBwaXBlbGlu
+ZUN1cnNvciwgImRlc2NyaXB0aW9uIiApOw0KaW50IGNvdW50ID0gSURhdGFVdGlsLmdldEludCgg
+cGlwZWxpbmVDdXJzb3IsICJjb3VudCIsIDEpOw0KU3RyaW5nIGV4cGVjdGVkUmVzdWx0cyA9IElE
+YXRhVXRpbC5nZXRTdHJpbmcoIHBpcGVsaW5lQ3Vyc29yLCAiZXhwZWN0ZWRSZXN1bHRzIiApOw0K
+cGlwZWxpbmVDdXJzb3IuZGVzdHJveSgpOw0KDQpJbnRlZ3JhdGlvblRlc3QgdGVzdCA9IG5ldyBJ
+bnRlZ3JhdGlvblRlc3QodGVzdE5hbWUsIGRlc2NyaXB0aW9uLCBjb3VudCwgZXhwZWN0ZWRSZXN1
+bHRzKTsNCkludGVncmF0aW9uVGVzdE1hcC5nZXRJbnN0YW5jZSgpLmFkZEludGVncmF0aW9uVGVz
+dCh0ZXN0KTsNCnRlc3Quc3RhcnRUZXN0KCk7DQoNCg==</value>
+</Values>

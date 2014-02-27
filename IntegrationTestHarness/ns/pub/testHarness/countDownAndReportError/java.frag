@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">countDownAndReportError</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgaWMgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsNClN0cmluZyB0ZXN0TmFtZSA9
+IElEYXRhVXRpbC5nZXRTdHJpbmcoaWMsICJ0ZXN0TmFtZSIpOw0KU3RyaW5nIGVycm9yTXNnID0g
+SURhdGFVdGlsLmdldFN0cmluZyhpYywgImVycm9yTXNnIik7DQppYy5kZXN0cm95KCk7DSAKCmlm
+ICh0ZXN0TmFtZSA9PSBudWxsIHx8IHRlc3ROYW1lLmxlbmd0aCgpIDwgMSkgew0KICAgIHRocm93
+IG5ldyBTZXJ2aWNlRXhjZXB0aW9uKCJtaXNzaW5nIHJlcXVpcmVkIGZpZWxkOiB0ZXN0TmFtZSIp
+Ow0KfQ0KDQpJbnRlZ3JhdGlvblRlc3QgdGVzdCA9IEludGVncmF0aW9uVGVzdE1hcC5nZXRJbnN0
+YW5jZSgpLmdldEludGVncmF0aW9uVGVzdCh0ZXN0TmFtZSk7CmlmICh0ZXN0ICE9IG51bGwpIHsN
+CiAgICB0ZXN0LmNvdW50RG93bkFuZFJlcG9ydEVycm9yKGVycm9yTXNnKTsNCn0NCg==</value>
+</Values>
