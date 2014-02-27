@@ -1,0 +1,65 @@
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by rspm (rspm) -->
+<definitions xmlns:tns="http://www.map.es/scsp/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:p="http://www.map.es/scsp/esquemas/V2/peticion" xmlns:cp="http://www.map.es/scsp/esquemas/V2/confirmacionPeticion" xmlns:sr="http://www.map.es/scsp/esquemas/V2/solicitudRespuesta" xmlns:r="http://www.map.es/scsp/esquemas/V2/respuesta" targetNamespace="http://www.map.es/scsp/wsdl">
+	<types>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.map.es/scsp/esquemas/V2/peticion" schemaLocation="peticionV2.xsd"/>
+		</xsd:schema>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.map.es/scsp/esquemas/V2/solicitudRespuesta" schemaLocation="solicitud-respuestaV2.xsd"/>
+		</xsd:schema>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.map.es/scsp/esquemas/V2/confirmacionPeticion" schemaLocation="confirmacion-peticionV2.xsd"/>
+		</xsd:schema>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://www.map.es/scsp/esquemas/V2/respuesta" schemaLocation="respuestaV2.xsd"/>
+		</xsd:schema>
+	</types>
+	<message name="PeticionCadomRequest">
+		<part name="parameter" element="p:Peticion"/>
+	</message>
+	<message name="PeticionCadomResponse">
+		<part name="parameter" element="cp:ConfirmacionPeticion"/>
+	</message>
+	<message name="RespuestaCadomRequest">
+		<part name="parameter" element="sr:SolicitudRespuesta"/>
+	</message>
+	<message name="RespuestaCadomResponse">
+		<part name="parameter" element="r:Respuesta"/>
+	</message>
+	<portType name="CambioDomicilioAsincPortType">
+		<operation name="solicitarCambioDomicilio">
+			<input message="tns:PeticionCadomRequest"/>
+			<output message="tns:PeticionCadomResponse"/>
+		</operation>
+		<operation name="solicitarRespuesta">
+			<input message="tns:RespuestaCadomRequest"/>
+			<output message="tns:RespuestaCadomResponse"/>
+		</operation>
+	</portType>
+	<binding name="WSCOCDAsincronoBinding" type="tns:CambioDomicilioAsincPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="solicitarCambioDomicilio">
+			<soap:operation soapAction="cadom"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="solicitarRespuesta">
+			<soap:operation soapAction="cadom"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="CambioDomicilioAsinc">
+		<port name="CambioDomicilioAsincPort" binding="tns:WSCOCDAsincronoBinding">
+			<soap:address location="https://10.252.99.23:8086/cadom"/>
+		</port>
+	</service>
+</definitions>

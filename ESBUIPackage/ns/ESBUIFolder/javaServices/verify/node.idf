@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">ESBUIFolder.javaServices.verify</value>
+  <value name="is_public">false</value>
+  <value name="encodeutf8">true</value>
+  <value name="shared">cHVibGljIHN0YXRpYyBmaW5hbCB2b2lkIHRlc3QoKXsKCVN5c3RlbS5vdXQucHJpbnRsbihuZXcg
+RGF0ZSgpKTsKfQoKQE92ZXJyaWRlCnB1YmxpYyBpbnQgY29tcGFyZVRvKE9iamVjdCBvKSB7Cgly
+ZXR1cm4gMDsKfQ==</value>
+  <value name="extends">MouseAdapter</value>
+  <array name="implements" type="value" depth="1">
+    <value>Comparable</value>
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>java.awt.event.MouseAdapter</value>
+    <value>java.util.Date</value>
+  </array>
+</Values>

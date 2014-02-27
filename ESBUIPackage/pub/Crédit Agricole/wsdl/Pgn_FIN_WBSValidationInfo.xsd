@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--edited with XMLSpy v2010 (http://www.altova.com) by PROGRESS ENERGY (PROGRESS ENERGY)--><xsd:schema targetNamespace="urn:pgn:objects:xmlschema:FIN:wval.version1.0" xmlns:q1="urn:pgn:objects:xmlschema:INF:MessageHeader:version1.0" xmlns:tns="urn:pgn:objects:xmlschema:FIN:wval.version1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="urn:pgn:objects:xmlschema:INF:MessageHeader:version1.0" schemaLocation="Pgn_INF_MessageHeader.xsd"/>
+  <xsd:complexType name="WvalRequest_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="validation_indicator" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="project" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="task" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="charge_by" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="expenditure_type" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="expenditure_date" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="multi_org_name" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="WvalRequestResponse_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="validation_return_code" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="project_description" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="charge_by_description" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="wval_message_code" nillable="true" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="wval_message" nillable="true" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="WvalRequest" type="tns:WvalRequest_Type"/>
+  <xsd:element name="WvalRequestResponse" type="tns:WvalRequestResponse_Type"/>
+  <xsd:complexType name="WvalRequestMsg_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="MessageHeader" type="q1:MessageHeader_Type"/>
+      <xsd:element minOccurs="0" name="WvalRequest" type="tns:WvalRequest_Type"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="WvalRequestResponseMsg_Type">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="MessageHeader" type="q1:MessageHeader_Type"/>
+      <xsd:element minOccurs="0" name="WvalRequestResponse" type="tns:WvalRequestResponse_Type"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="WvalRequestMsg" type="tns:WvalRequestResponseMsg_Type"/>
+  <xsd:element name="WvalRequestResponseMsg" type="tns:WvalRequestResponseMsg_Type"/>
+</xsd:schema>

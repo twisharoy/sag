@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webServiceDescriptor</value>
+  <value name="node_nsName">provider:PWSD712</value>
+  <value name="node_pkg">ESBUIPackage</value>
+  <value name="inbound">true</value>
+  <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+  <value name="targetNamespace">http://RTOMI-VSS2005/provider/PWSD712</value>
+  <value name="definitionName">PWSD712</value>
+  <value name="version">_7_1_X</value>
+  <Boolean name="rawArray">false</Boolean>
+  <number name="mtomThreshold" type="Integer">0</number>
+  <array name="binderList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="binderName">provider_PWSD712_Binder</value>
+      <value name="portAlias">default</value>
+      <value name="bindingName">provider_PWSD712_Binder</value>
+      <value name="bindingStyle">document</value>
+      <value name="bindingTransport">http://schemas.xmlsoap.org/soap/http</value>
+      <value name="transportType">http</value>
+      <value name="bindingUse">literal</value>
+      <value name="bindingType">SOAP</value>
+      <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+      <value name="portName">provider_PWSD712_Port</value>
+      <value name="portTypeName">PWSD712_PortType</value>
+      <value name="SOAPDirective">ws</value>
+      <record name="operationMap" javaclass="com.wm.util.Values">
+        <value name="provider_PWSD712_Binder_addInts">addInts</value>
+      </record>
+    </record>
+  </array>
+  <array name="operationList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">addInts</value>
+      <value name="serviceName">pub.math:addInts</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addIntsInput</value>
+          <value name="nsOwner">pub.math:addInts</value>
+          <number name="nsOwnerType" type="Integer">1</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">addIntsOutput</value>
+          <value name="nsOwner">pub.math:addInts</value>
+          <number name="nsOwnerType" type="Integer">2</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <value name="originalDocName"></value>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+  </array>
+  <record name="namespaces" javaclass="com.wm.util.Values">
+    <value name="tns">http://RTOMI-VSS2005/provider/PWSD712</value>
+    <value name="wsdl">http://schemas.xmlsoap.org/wsdl/</value>
+    <value name="xsd">http://www.w3.org/2001/XMLSchema</value>
+    <value name="http">http://schemas.xmlsoap.org/wsdl/http/</value>
+    <value name="mime">http://schemas.xmlsoap.org/wsdl/mime/</value>
+    <value name="soapenc">http://schemas.xmlsoap.org/soap/encoding/</value>
+    <value name="soap12">http://schemas.xmlsoap.org/wsdl/soap12/</value>
+    <value name="soap">http://schemas.xmlsoap.org/wsdl/soap/</value>
+  </record>
+  <Boolean name="stack71X">true</Boolean>
+  <array name="handlerList" type="record" depth="1">
+  </array>
+  <Boolean name="HeadersInPipelineEnabled">true</Boolean>
+  <Boolean name="validateSOAPResponse">true</Boolean>
+</Values>

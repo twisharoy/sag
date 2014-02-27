@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webServiceDescriptor</value>
+  <value name="node_nsName">consumer:CWSD801</value>
+  <value name="node_pkg">ESBUIPackage</value>
+  <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+  <value name="targetNamespace">http://mcrtomi01.eur.ad.sag/provider/PWSD801</value>
+  <value name="definitionName">CWSD801</value>
+  <value name="version">_8_0</value>
+  <Boolean name="rawArray">true</Boolean>
+  <number name="mtomThreshold" type="Integer">0</number>
+  <value name="externalWSDLURL">http://mcrtomi01.eur.ad.sag:7479/ws/provider:PWSD801?WSDL</value>
+  <value name="externalWSDL">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;wsdl:definitions name="PWSD801" targetNamespace="http://mcrtomi01.eur.ad.sag/provider/PWSD801" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapjms="http://www.w3.org/2008/07/soap/bindings/JMS/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://mcrtomi01.eur.ad.sag/provider/PWSD801" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"&gt;
+  &lt;wsdl:types&gt;
+    &lt;xsd:schema targetNamespace="http://mcrtomi01.eur.ad.sag/provider/PWSD801" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://mcrtomi01.eur.ad.sag/provider/PWSD801"&gt;
+          &lt;xsd:complexType name="multiplyIntsInput"&gt;
+            &lt;xsd:sequence&gt;
+              &lt;xsd:element name="num1" nillable="true" type="xsd:string"/&gt;
+              &lt;xsd:element name="num2" nillable="true" type="xsd:string"/&gt;
+            &lt;/xsd:sequence&gt;
+          &lt;/xsd:complexType&gt;
+          &lt;xsd:complexType name="multiplyIntsOutput"&gt;
+            &lt;xsd:sequence&gt;
+              &lt;xsd:element name="value" nillable="true" type="xsd:string"/&gt;
+            &lt;/xsd:sequence&gt;
+          &lt;/xsd:complexType&gt;
+        			&lt;xsd:element name="multiplyIntsInput" type="tns:multiplyIntsInput"/&gt;
+			&lt;xsd:element name="multiplyIntsOutput" type="tns:multiplyIntsOutput"/&gt;
+	&lt;/xsd:schema&gt;
+  &lt;/wsdl:types&gt;
+  &lt;wsdl:message name="PWSD801_PortType_multiplyIntsOutput"&gt;
+    &lt;wsdl:part name="parameters" element="tns:multiplyIntsOutput"&gt;
+    &lt;/wsdl:part&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="PWSD801_PortType_multiplyIntsInput"&gt;
+    &lt;wsdl:part name="parameters" element="tns:multiplyIntsInput"&gt;
+    &lt;/wsdl:part&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:portType name="PWSD801_PortType"&gt;
+    &lt;wsdl:operation name="multiplyInts"&gt;
+      &lt;wsdl:input message="tns:PWSD801_PortType_multiplyIntsInput"&gt;
+    &lt;/wsdl:input&gt;
+      &lt;wsdl:output message="tns:PWSD801_PortType_multiplyIntsOutput"&gt;
+    &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:portType&gt;
+  &lt;wsdl:binding name="provider_PWSD801_Binder" type="tns:PWSD801_PortType"&gt;
+    &lt;soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+    &lt;wsdl:operation name="multiplyInts"&gt;
+      &lt;soap:operation soapAction="provider_PWSD801_Binder_multiplyInts" style="document"/&gt;
+      &lt;wsdl:input&gt;
+        &lt;soap:body parts="parameters" use="literal"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output&gt;
+        &lt;soap:body parts="parameters" use="literal"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:binding&gt;
+  &lt;wsdl:service name="PWSD801"&gt;
+    &lt;wsdl:port name="provider_PWSD801_Port" binding="tns:provider_PWSD801_Binder"&gt;
+      &lt;soap:address location="http://mcrtomi01.eur.ad.sag:7479/ws/provider:PWSD801"/&gt;
+    &lt;/wsdl:port&gt;
+  &lt;/wsdl:service&gt;
+&lt;/wsdl:definitions&gt;
+</value>
+  <array name="binderList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="binderName">provider_PWSD801_Binder</value>
+      <value name="portAddress">http://mcrtomi01.eur.ad.sag:7479/ws/provider:PWSD801</value>
+      <value name="bindingName">provider_PWSD801_Binder</value>
+      <value name="bindingStyle">document</value>
+      <value name="bindingTransport">http://schemas.xmlsoap.org/soap/http</value>
+      <value name="transportType">http</value>
+      <value name="bindingUse">literal</value>
+      <value name="bindingType">SOAP</value>
+      <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+      <value name="portName">provider_PWSD801_Port</value>
+      <value name="portTypeName">PWSD801_PortType</value>
+      <value name="SOAPDirective">ws</value>
+      <record name="operationMap" javaclass="com.wm.util.Values">
+        <value name="provider_PWSD801_Binder_multiplyInts">multiplyInts</value>
+      </record>
+    </record>
+  </array>
+  <array name="operationList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">multiplyInts</value>
+      <value name="serviceName">consumer.CWSD801_.connectors:multiplyInts</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://mcrtomi01.eur.ad.sag/provider/PWSD801:PWSD801_PortType_multiplyInts_Input</value>
+          <value name="docType">consumer.CWSD801_.docTypes:PWSD801_PortType_multiplyInts_Output</value>
+          <value name="nsOwner">consumer.CWSD801_.docTypes:PWSD801_PortType_multiplyInts_Output</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://mcrtomi01.eur.ad.sag/provider/PWSD801:PWSD801_PortType_multiplyInts_Output</value>
+          <value name="docType">consumer.CWSD801_.docTypes:PWSD801_PortType_multiplyInts_Output</value>
+          <value name="nsOwner">consumer.CWSD801_.docTypes:PWSD801_PortType_multiplyInts_Output</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+  </array>
+  <record name="namespaces" javaclass="com.wm.util.Values">
+    <value name="soapenc">http://schemas.xmlsoap.org/soap/encoding/</value>
+    <value name="tns">http://mcrtomi01.eur.ad.sag/provider/PWSD801</value>
+    <value name="wsdl">http://schemas.xmlsoap.org/wsdl/</value>
+    <value name="http">http://schemas.xmlsoap.org/wsdl/http/</value>
+    <value name="soapjms">http://www.w3.org/2008/07/soap/bindings/JMS/</value>
+    <value name="xsd">http://www.w3.org/2001/XMLSchema</value>
+    <value name="mime">http://schemas.xmlsoap.org/wsdl/mime/</value>
+    <value name="soap">http://schemas.xmlsoap.org/wsdl/soap/</value>
+    <value name="soap12">http://schemas.xmlsoap.org/wsdl/soap12/</value>
+  </record>
+  <Boolean name="stack71X">true</Boolean>
+  <array name="handlerList" type="record" depth="1">
+  </array>
+  <Boolean name="HeadersInPipelineEnabled">false</Boolean>
+  <Boolean name="validateSOAPResponse">true</Boolean>
+</Values>

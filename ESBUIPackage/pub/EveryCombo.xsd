@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="employee" type="person"/>
+  <xs:complexType name="person">
+    <xs:all>
+      <xs:element name="firstname" type="xs:string"/>
+      <xs:element name="lastname" type="xs:string"/>
+    </xs:all>
+  </xs:complexType>
+  <xs:element name="student" type="child"/>
+  <xs:complexType name="child">
+    <xs:choice>
+      <xs:element name="firstname" type="xs:string"/>
+      <xs:element name="lastname" type="xs:string"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="person">
+   <xs:complexType>
+    <xs:sequence>
+      <xs:element name="firstname" type="xs:string"/>
+      <xs:element name="lastname" type="xs:string"/>
+      <xs:element name="kids" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+  <xs:element name="rootA" type="typeA" />
+   <xs:complexType name="typeA" >
+      <xs:simpleContent >
+         <xs:extension base="xs:integer" >
+            <xs:attribute name="attr1"/>
+            <xs:attribute name="attr2" use="required" />
+         </xs:extension>
+      </xs:simpleContent>
+   </xs:complexType>
+  <xs:element name="image" type="xs:base64Binary" />
+</xs:schema>

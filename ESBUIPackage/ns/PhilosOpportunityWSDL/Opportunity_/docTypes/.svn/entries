@@ -1,0 +1,279 @@
+9
+
+dir
+10904
+svn://10.60.25.162/ESBUIPackage/ns/PhilosOpportunityWSDL/Opportunity_/docTypes
+svn://10.60.25.162
+
+
+
+2012-12-07T06:02:40.995562Z
+10904
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+49e584ca-1d61-4a42-a2aa-9a54e38e2cf9
+
+
+
+
+
+
+0
+
+docTypeRef_xsdLocal2_ActivityQuery
+dir
+
+docTypeRef_xsdLocal2_AttachmentQuery
+dir
+
+docTypeRef_xsdLocal2_CustomObject10Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject11Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject12Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject13Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject14Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject15Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject16Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject17Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject18Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject19Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject20Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject21Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject22Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject23Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject24Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject25Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject4Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject5Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject6Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject7Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject8Query
+dir
+
+docTypeRef_xsdLocal2_CustomObject9Query
+dir
+
+docTypeRef_xsdLocal2_DealRegistrationQuery
+dir
+
+docTypeRef_xsdLocal2_LeadQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfActivityQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfAttachmentQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject10Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject11Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject12Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject13Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject14Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject15Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject16Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject17Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject18Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject19Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject20Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject21Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject22Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject23Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject24Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject25Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject4Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject5Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject6Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject7Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject8Query
+dir
+
+docTypeRef_xsdLocal2_ListOfCustomObject9Query
+dir
+
+docTypeRef_xsdLocal2_ListOfDealRegistrationQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfLeadQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfNoteQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfOpportunityQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfOrderQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfPlanOpportunityQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfProductRevenueQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfQuoteQuery
+dir
+
+docTypeRef_xsdLocal2_ListOfSPRequestQuery
+dir
+
+docTypeRef_xsdLocal2_NoteQuery
+dir
+
+docTypeRef_xsdLocal2_OpportunityQuery
+dir
+
+docTypeRef_xsdLocal2_OrderQuery
+dir
+
+docTypeRef_xsdLocal2_PlanOpportunityQuery
+dir
+
+docTypeRef_xsdLocal2_ProductRevenueQuery
+dir
+
+docTypeRef_xsdLocal2_QuoteQuery
+dir
+
+docTypeRef_xsdLocal2_SPRequestQuery
+dir
+
+docTypeRef_xsdLocal2_queryType
+dir
+
+node.idf
+file
+
+
+
+
+2012-12-07T06:06:34.887000Z
+8fc86c4a7a1fad781dcae73aebbd0a1e
+2012-12-07T06:02:40.995562Z
+10904
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+197
+
+schema_Opportunity
+dir
+
+schema_Opportunity_2
+dir
+
+schema_Opportunity_3
+dir
+

@@ -1,0 +1,147 @@
+9
+
+dir
+10904
+svn://10.60.25.162/ESBUIPackage/ns/FlowEditor/flowIOEditor
+svn://10.60.25.162
+
+
+
+2012-12-07T06:02:40.995562Z
+10904
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+49e584ca-1d61-4a42-a2aa-9a54e38e2cf9
+
+
+
+
+
+
+0
+
+addDocRefByDragDrop
+dir
+
+addVariablesToIOTab
+dir
+
+changeVariablePositionByDragDrop
+dir
+
+changeVariableType
+dir
+
+changeVariables
+dir
+
+copyPasteFlow1
+dir
+
+copyPasteFlow2
+dir
+
+copyPasteIOVariables
+dir
+
+cutPasteIOVariables
+dir
+
+deleteIOVariables
+dir
+
+dragDropIOVariables
+dir
+
+editAndSaveFlowServiceProperties
+dir
+
+iodocumentReferences
+dir
+
+moveIOVariables
+dir
+
+node.idf
+file
+
+
+
+
+2012-12-07T06:06:38.537000Z
+95335fa5107508e27a1f48ae124ba491
+2012-12-07T06:02:40.995562Z
+10904
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+217
+
+renameIOVariables
+dir
+
+searchIOVariables
+dir
+
+stringDisplayTypeLargeEditor
+dir
+
+variablePalette
+dir
+
+verifyDocRefUpdate
+dir
+
+verifyIOVarConstraints
+dir
+
+verifyIconChange
+dir
+
+verifyIconChangeForRequiredField
+dir
+
+verifyPickListChoices
+dir
+
+verifyPropertyForMultipleIOvars
+dir
+
+verifyStringDisplayType
+dir
+
+verifyUnspecifiedFieldsValidation
+dir
+

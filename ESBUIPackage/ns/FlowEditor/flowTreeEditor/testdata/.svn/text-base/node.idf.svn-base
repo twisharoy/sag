@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">FlowEditor.flowTreeEditor.testdata</value>
+  <value name="is_public">false</value>
+  <value name="shared">DQpzdGF0aWMgewogICAgdHJ5IHsKICAgICAgICBTeXN0ZW0ubG9hZExpYnJhcnkoImZsb3dUcmVl
+RWRpdG9yX3Rlc3RkYXRhIik7CiAgICAgICAgSm91cm5hbExvZ2dlci5sb2coRGVidWdNc2cuTE9H
+X01TRywgSm91cm5hbExvZ2dlci5GQUNfUEFDS0FHRSwgSm91cm5hbExvZ2dlci5JTkZPLCAKCQkJ
+IkxvYWRpbmcgbmF0aXZlIGxpYnJhcnk6IGZsb3dUcmVlRWRpdG9yX3Rlc3RkYXRhIik7CiAgICB9
+IGNhdGNoIChVbnNhdGlzZmllZExpbmtFcnJvciBlKSB7CiAgICAgICAgSm91cm5hbExvZ2dlci5s
+b2dFcnJvcihEZWJ1Z01zZy5MT0dfTVNHLCBKb3VybmFsTG9nZ2VyLkZBQ19QQUNLQUdFLCAKCQkJ
+ZS5nZXRNZXNzYWdlKCkpOwogICAgfQp9Cg0KbmF0aXZlIHN0YXRpYyBWYWx1ZXMgY2MxKFNlc3Np
+b24gc2Vzc2lvbiwgVmFsdWVzIGluKTsKCQ==</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>com.wm.app.b2b.server.Session</value>
+    <value>com.wm.util.JournalLogger</value>
+    <value>com.wm.util.DebugMsg</value>
+  </array>
+</Values>

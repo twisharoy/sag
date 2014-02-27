@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">Automated.retryFailureHandlingTestSuite.backend</value>
+  <value name="shared">cHJpdmF0ZSBzdGF0aWMgaW50IFRJTUVfVE9fRkFJTCA9IDIwICogMTAwMDsKcHJpdmF0ZSBzdGF0
+aWMgbG9uZyBfc3RhcnRUaW1lOwoKcHJpdmF0ZSBzdGF0aWMgYm9vbGVhbiBpc0F2YWlsYWJsZSgp
+IHsKICAgIGlmIChTeXN0ZW0uY3VycmVudFRpbWVNaWxsaXMoKSA+IF9zdGFydFRpbWUgKyBUSU1F
+X1RPX0ZBSUwpIHsKICAgICAgICByZXR1cm4gdHJ1ZTsKICAgIH1lbHNlIHsKICAgICAgICByZXR1
+cm4gZmFsc2U7CiAgICB9Cn0=</value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+  </array>
+</Values>

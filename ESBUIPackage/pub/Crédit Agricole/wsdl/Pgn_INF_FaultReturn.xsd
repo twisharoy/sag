@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="urn:pgn:objects:xmlschema:INF:FaultReturn:version1.0" version="1.0" xmlns:pgn="urn:pgn:objects:xmlschema:INF:FaultReturn:version1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="string_type">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="int_type">
+    <xs:restriction base="xs:int"/>
+  </xs:simpleType>
+  <xs:simpleType name="abstractElementRef_type">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="ErrorLocationRef_type">
+    <xs:restriction base="pgn:abstractElementRef_type"/>
+  </xs:simpleType>
+  <xs:simpleType name="ServiceErrorRef_type">
+    <xs:restriction base="pgn:abstractElementRef_type"/>
+  </xs:simpleType>
+  <xs:simpleType name="BaseFaultContractRef_type">
+    <xs:restriction base="pgn:abstractElementRef_type"/>
+  </xs:simpleType>
+  <xs:complexType name="ErrorLocation_Type">
+    <xs:sequence maxOccurs="1" minOccurs="1">
+      <xs:element maxOccurs="1" minOccurs="1" name="errorNode" nillable="true" type="pgn:string_type"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="errorPipeline" nillable="true" type="pgn:string_type"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="errorStage" nillable="true" type="pgn:string_type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServiceError_Type">
+    <xs:complexContent mixed="false">
+      <xs:extension base="pgn:BaseFaultContract_Type">
+        <xs:sequence maxOccurs="1" minOccurs="1">
+          <xs:element maxOccurs="1" minOccurs="1" name="errorReason" nillable="true" type="pgn:string_type"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="stackTrace" nillable="true" type="pgn:string_type"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="ErrorLocation" type="pgn:ErrorLocation_Type"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="BaseFaultContract_Type">
+    <xs:sequence maxOccurs="1" minOccurs="1">
+      <xs:element maxOccurs="1" minOccurs="1" name="CorrelationID" nillable="true" type="pgn:string_type"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="ErrorID" nillable="true" type="pgn:int_type"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="ErrorMessage" nillable="true" type="pgn:string_type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorLocation" type="pgn:ErrorLocation_Type"/>
+  <xs:element name="ServiceError" type="pgn:ServiceError_Type"/>
+  <xs:element name="BaseFaultContract" type="pgn:BaseFaultContract_Type"/>
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="urn:pgn:objects:xmlschema:INF:MessageHeader:version1.0" version="1.0" xmlns:pgn="urn:pgn:objects:xmlschema:INF:MessageHeader:version1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="MessageHeader_Type">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identifier" type="xs:string"/>
+      <xs:element minOccurs="0" name="referenceID" type="xs:string"/>
+      <xs:element minOccurs="0" name="source" type="xs:string"/>
+      <xs:element minOccurs="0" name="target" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MessageHeader" type="pgn:MessageHeader_Type"/>
+</xs:schema>

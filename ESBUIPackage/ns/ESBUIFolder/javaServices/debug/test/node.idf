@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">ESBUIFolder.javaServices.debug.test</value>
+  <value name="is_public">false</value>
+  <value name="encodeutf8">true</value>
+  <value name="shared">cHJpdmF0ZSBzdGF0aWMgaW50IGFkZChpbnQgYSwgaW50IGIpewoJaW50IGMgPSAwOwoJYz1hK2I7
+CglyZXR1cm4gYzsKfQ==</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>com.wm.data.IData</value>
+    <value>com.wm.data.IDataCursor</value>
+  </array>
+</Values>

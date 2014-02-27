@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Title: mom.is.pkg.wmflatfile.sources
+Implementation-Version: 9.6.0.0000-0294
+Implementation-Vendor-Id: com.softwareag
+Implementation-Vendor: Software AG
+Created-By: SAG Build Automation System
+

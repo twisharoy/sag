@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">testjs_2</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUNCklEYXRhQ3Vyc29yIHBpcGVsaW5lQ3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vy
+c29yKCk7DQoJU3RyaW5nCW51bTEgPSAiMTMiOy8vSURhdGFVdGlsLmdldFN0cmluZyggcGlwZWxp
+bmVDdXJzb3IsICJudW0xIiApOw0KCVN0cmluZwludW0yID0gIjEyIjsvL0lEYXRhVXRpbC5nZXRT
+dHJpbmcoIHBpcGVsaW5lQ3Vyc29yLCAibnVtMiIgKTsNCnBpcGVsaW5lQ3Vyc29yLmRlc3Ryb3ko
+KTsNCmludCB4ID0gSW50ZWdlci5wYXJzZUludChudW0xKTsNCmludCB5ID0gSW50ZWdlci5wYXJz
+ZUludChudW0yKTsNCmludCB6ID0gYWRkKHgseSk7DQovLyBwaXBlbGluZQ0KLypJRGF0YUN1cnNv
+ciBwaXBlbGluZUN1cnNvcl8xID0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7DQpJRGF0YVV0aWwucHV0
+KCBwaXBlbGluZUN1cnNvcl8xLCAicmVzdWx0IiwgeiApOw0KcGlwZWxpbmVDdXJzb3JfMS5kZXN0
+cm95KCk7Ki8NCgk=</value>
+</Values>

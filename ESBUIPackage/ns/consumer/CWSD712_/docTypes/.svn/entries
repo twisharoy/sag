@@ -1,0 +1,84 @@
+9
+
+dir
+10904
+svn://10.60.25.162/ESBUIPackage/ns/consumer/CWSD712_/docTypes
+svn://10.60.25.162
+
+
+
+2012-12-07T06:02:40.995562Z
+10904
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+49e584ca-1d61-4a42-a2aa-9a54e38e2cf9
+
+
+
+
+
+
+0
+
+PWSD712_PortType_addInts_Input
+dir
+
+PWSD712_PortType_addInts_Output
+dir
+
+docTypeRef_tns_addIntsInput
+dir
+
+docTypeRef_tns_addIntsOutput
+dir
+
+node.idf
+file
+
+
+
+
+2012-12-07T06:06:38.948000Z
+02932dfed5fdc52c6593da40dcad9e7b
+2012-12-07T06:02:40.995562Z
+10904
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+180
+
+schema_CWSD712
+dir
+

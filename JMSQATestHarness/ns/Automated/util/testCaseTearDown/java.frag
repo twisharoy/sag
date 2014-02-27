@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">testCaseTearDown</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgaWMgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsKU3RyaW5nW10gdHJpZ2dlck5h
+bWVzID0gSURhdGFVdGlsLmdldFN0cmluZ0FycmF5KGljLCAidHJpZ2dlck5hbWVzIik7CmljLmRl
+c3Ryb3koKTsKCmlmICh0cmlnZ2VyTmFtZXMgIT0gbnVsbCkgeyAKCiAgdHJ5IHsgCiAgICBUaHJl
+YWQuc2xlZXAoMTAwKTsgLy8gbmVlZCB0byBzbGVlcCBmb3IgYSBiaXQgdG8gYmUgc3VyZSB0aGF0
+IHRoZSB0cmlnZ2VyIGhhdmUgZmluaXNoZWQgdGhlaXIgYWNrCiAgfWNhdGNoKEludGVycnVwdGVk
+RXhjZXB0aW9uIGV4KSB7fQoKICBmb3IoaW50IGk9MDsgaTx0cmlnZ2VyTmFtZXMubGVuZ3RoOyBp
+KyspIHsKICAgIHRyeSB7CiAgICAgICAgSk1TVHJpZ2dlckZhY2FkZSBmYWNhZGUgPSBuZXcgSk1T
+VHJpZ2dlckZhY2FkZSh0cmlnZ2VyTmFtZXNbaV0pOwogICAgICAgIGZhY2FkZS5kaXNhYmxlVHJp
+Z2dlcigpOwogICAgfWNhdGNoKEV4Y2VwdGlvbiBleCkgewogICAgICAgIHRocm93IG5ldyBTZXJ2
+aWNlRXhjZXB0aW9uKGV4KTsKICAgIH0KICB9Cn0=</value>
+</Values>

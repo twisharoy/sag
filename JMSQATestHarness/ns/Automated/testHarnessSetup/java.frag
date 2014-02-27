@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">testHarnessSetup</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">dHJ5IHsKICAgIExvZ01hbmFnZXIgbG9nTWFuYWdlciA9IExvZ01hbmFnZXIuZ2V0TG9nTWFuYWdl
+cigpOwogICAgbG9nTWFuYWdlci5yZXNldCgpOwogICAgRmlsZUhhbmRsZXIgZmlsZUhhbmRsZXIg
+PSBuZXcgRmlsZUhhbmRsZXIoIi5cXHBhY2thZ2VzXFxKTVNRQVRlc3RIYXJuZXNzXFxqbXNxYVJl
+c3VsdHMlZy5sb2ciLCAwLCAxMCk7CiAgICAvL0ZpbGVIYW5kbGVyIGZpbGVIYW5kbGVyID0gbmV3
+IEZpbGVIYW5kbGVyKCIuXFxsb2dzXFxqbXNxYVJlc3VsdHMlZy5sb2ciLCAwLCAxMCk7CiAgICBm
+aWxlSGFuZGxlci5zZXRGb3JtYXR0ZXIobmV3IEJhc2ljTG9nZ2luZ0Zvcm1hdHRlcigpKTsgICAg
+ICAKICAgIExvZ2dlciBsb2dnZXIgPSBMb2dnZXIuZ2V0TG9nZ2VyKCJqbXNxYSIpOwogICAgbG9n
+Z2VyLmFkZEhhbmRsZXIoZmlsZUhhbmRsZXIpOyAKICAgIGxvZ01hbmFnZXIuYWRkTG9nZ2VyKGxv
+Z2dlcik7ICAKfWNhdGNoKEV4Y2VwdGlvbiBleCkgewogICAgdGhyb3cgbmV3IFNlcnZpY2VFeGNl
+cHRpb24oZXgpOwp9ICA=</value>
+</Values>

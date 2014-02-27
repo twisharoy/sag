@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <value name="is_host">/10.60.30.105</value>
+    <value name="is_hostname">VMSuiteCSI.eur.ad.sag</value>
+    <value name="is_directory">C:\ESBTestRoot\Products\webM96\Designer\install\IntegrationServer\instances\default</value>
+    <value name="is_identifier">bd354886-1881-4952-9868-2eeb64e3c907</value>
+    <value name="library_username"></value>
+    <value name="library_url"></value>
+  </record>
+</IDataXMLCoder>

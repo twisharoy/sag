@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webMethods/trigger</value>
+  <value name="node_nsName">jmsqa.basicQueue.test6:triggerTest6</value>
+  <value name="node_pkg">WmJMSQA_BasicQueue</value>
+  <value name="trigger_type">jms-trigger</value>
+  <record name="trigger" javaclass="com.wm.util.Values">
+    <value name="serialSuspendOnError">false</value>
+    <value name="concurrent">false</value>
+    <value name="ordering">1</value>
+    <value name="auditOption">0</value>
+    <record name="auditSettings" javaclass="com.wm.util.Values">
+      <value name="document_data">0</value>
+      <value name="startExecution">false</value>
+      <value name="stopExecution">false</value>
+      <value name="onError">true</value>
+    </record>
+    <record name="redeliveryOptions" javaclass="com.wm.util.Values">
+      <value name="max">0</value>
+      <value name="delayInterval">0</value>
+      <value name="onRedeliveryFailure">0</value>
+    </record>
+    <value name="joinTimeout">86400000</value>
+    <value name="maxConcurrentThreads">1</value>
+    <value name="inDoubtDetection">false</value>
+    <value name="resolveWithHistory">false</value>
+    <value name="resolutionHistoryTTL">7200000</value>
+    <value name="uniqueId">a9D9jirLdyl9aFi1GOjY/zOmIT0=</value>
+    <value name="aliasName">JMSQA_QueueConnection</value>
+    <Boolean name="enabled">true</Boolean>
+    <Boolean name="active">false</Boolean>
+    <value name="prefetchSize">0</value>
+    <value name="inactiveWaitTime">3000</value>
+    <value name="batchSize">1</value>
+    <value name="destinationType">-1</value>
+    <value name="acknowledgeMode">2</value>
+    <value name="includeMessage">true</value>
+    <value name="joinType">3</value>
+    <value name="executeUser">Administrator</value>
+    <array name="routingRules" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="ruleName">Good rule</value>
+        <value name="serviceName">jmsqa.basicQueue.test6:targetA</value>
+        <value name="filter">%JMSMessages[0]/body/data/docType% == A</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="ruleName">Bad rule</value>
+        <value name="serviceName">jmsqa.basicQueue.test6:targetB</value>
+        <null name="filter"/>
+      </record>
+    </array>
+    <array name="destinations" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="destination">queue6</value>
+        <null name="messageSelector"/>
+      </record>
+    </array>
+  </record>
+  <number name="LOCK_STATUS" type="Integer">3</number>
+  <record name="LOCK_INFO" javaclass="com.wm.util.Values">
+    <value name="OWNER">Administrator</value>
+    <value name="HOST">127.0.0.1</value>
+    <date name="LOCK_TIME">Thu Oct 12 12:09:02 CDT 2006</date>
+  </record>
+  <null name="DEPENDENT_LOCKS"/>
+  <value name="status">true</value>
+</Values>

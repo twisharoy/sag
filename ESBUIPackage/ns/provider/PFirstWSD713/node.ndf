@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webServiceDescriptor</value>
+  <value name="node_nsName">provider:PFirstWSD713</value>
+  <value name="node_pkg">ESBUIPackage</value>
+  <value name="inbound">true</value>
+  <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+  <value name="targetNamespace">http://www.ecerami.com/wsdl/HelloService.wsdl</value>
+  <value name="definitionName">PFirstWSD713</value>
+  <value name="version">_7_1_X</value>
+  <Boolean name="rawArray">false</Boolean>
+  <number name="mtomThreshold" type="Integer">0</number>
+  <value name="externalWSDLURL">file:/C:/Installer/HelloService.wsdl</value>
+  <value name="externalWSDL">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;definitions name="HelloService"
+   targetNamespace="http://www.ecerami.com/wsdl/HelloService.wsdl"
+   xmlns="http://schemas.xmlsoap.org/wsdl/"
+   xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+   xmlns:tns="http://www.ecerami.com/wsdl/HelloService.wsdl"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+ 
+   &lt;message name="SayHelloRequest"&gt;
+      &lt;part name="firstName" type="xsd:string"/&gt;
+   &lt;/message&gt;
+   &lt;message name="SayHelloResponse"&gt;
+      &lt;part name="greeting" type="xsd:string"/&gt;
+   &lt;/message&gt;
+ 
+   &lt;portType name="Hello_PortType"&gt;
+      &lt;operation name="sayHello"&gt;
+         &lt;input message="tns:SayHelloRequest"/&gt;
+         &lt;output message="tns:SayHelloResponse"/&gt;
+      &lt;/operation&gt;
+   &lt;/portType&gt;
+   
+   &lt;binding name="Hello_Binding" type="tns:Hello_PortType"&gt;
+      &lt;soap:binding style="rpc" 
+         transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+      &lt;operation name="sayHello"&gt;
+         &lt;soap:operation soapAction="sayHello"/&gt;
+         &lt;input&gt;
+            &lt;soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:examples:helloservice"
+               use="encoded"/&gt;
+         &lt;/input&gt;
+         &lt;output&gt;
+            &lt;soap:body
+               encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+               namespace="urn:examples:helloservice"
+               use="encoded"/&gt;
+         &lt;/output&gt;
+      &lt;/operation&gt;
+   &lt;/binding&gt;
+ 
+   &lt;service name="Hello_Service"&gt;
+      &lt;documentation&gt;WSDL File for HelloService&lt;/documentation&gt;
+      &lt;port binding="tns:Hello_Binding" name="Hello_Port"&gt;
+         &lt;soap:address 
+            location="http://localhost:8080/soap/servlet/rpcrouter"/&gt;
+      &lt;/port&gt;
+   &lt;/service&gt;
+&lt;/definitions&gt;</value>
+  <array name="binderList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="binderName">Hello_Binding</value>
+      <value name="portAlias">default</value>
+      <value name="bindingName">Hello_Binding</value>
+      <value name="bindingStyle">rpc</value>
+      <value name="bindingTransport">http://schemas.xmlsoap.org/soap/http</value>
+      <value name="transportType">http</value>
+      <value name="bindingUse">encoded</value>
+      <value name="bindingType">SOAP</value>
+      <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+      <value name="portName">Hello_Port</value>
+      <value name="portTypeName">Hello_PortType</value>
+      <value name="SOAPDirective">ws</value>
+      <record name="operationMap" javaclass="com.wm.util.Values">
+        <value name="sayHello">sayHello</value>
+      </record>
+    </record>
+  </array>
+  <array name="operationList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">sayHello</value>
+      <value name="serviceName">provider.PFirstWSD713_.services:sayHello</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://www.ecerami.com/wsdl/HelloService.wsdl:Hello_PortType_sayHello_Input</value>
+          <value name="nsOwner">provider.PFirstWSD713_.services:sayHello</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://www.ecerami.com/wsdl/HelloService.wsdl:Hello_PortType_sayHello_Output</value>
+          <value name="nsOwner">provider.PFirstWSD713_.services:sayHello</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+  </array>
+  <record name="namespaces" javaclass="com.wm.util.Values">
+    <value name="tns">http://www.ecerami.com/wsdl/HelloService.wsdl</value>
+    <value name="xsd">http://www.w3.org/2001/XMLSchema</value>
+    <value name="soap">http://schemas.xmlsoap.org/wsdl/soap/</value>
+    <value name="">http://schemas.xmlsoap.org/wsdl/</value>
+  </record>
+  <Boolean name="stack71X">true</Boolean>
+  <array name="handlerList" type="record" depth="1">
+  </array>
+  <Boolean name="HeadersInPipelineEnabled">true</Boolean>
+  <Boolean name="validateSOAPResponse">true</Boolean>
+</Values>

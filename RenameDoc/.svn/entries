@@ -1,0 +1,123 @@
+10
+
+dir
+27165
+svn://10.60.25.162/RenameDoc
+svn://10.60.25.162
+
+
+
+2014-02-20T09:05:01.893728Z
+27156
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+49e584ca-1d61-4a42-a2aa-9a54e38e2cf9
+
+.project
+file
+
+
+
+
+2014-02-20T09:17:10.530000Z
+4e71c8cf045a9ac95bede3059abf989c
+2014-02-20T09:05:01.893728Z
+27156
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+273
+
+code
+dir
+
+config
+dir
+
+doc
+dir
+
+lib
+dir
+
+manifest.v3
+file
+
+
+
+
+2014-02-20T09:17:11.427000Z
+4cfb46fd31100bc4c59191839c1d93b0
+2014-02-20T09:05:01.893728Z
+27156
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+384
+
+ns
+dir
+
+pub
+dir
+
+resources
+dir
+
+templates
+dir
+
+web
+dir
+

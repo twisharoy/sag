@@ -1,0 +1,47 @@
+<schema targetNamespace="http://localhost/ComplexTypeExtensions/DerivedComplexType/FromComplexType/WithEmpty/schema.xsd"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://localhost/ComplexTypeExtensions/DerivedComplexType/FromComplexType/WithEmpty/schema.xsd">
+
+  <element name="Item_1" type="tns:Item1Type"/>
+  <element name="Item_2" type="tns:Item2Type"/>
+
+  <complexType name="Item1Type">
+    <sequence>
+      <element name="Item" type="tns:ItemType" />
+    </sequence>
+  </complexType>
+  
+  <complexType name="Item2Type">
+    <sequence>
+      	<element name="Item" type="tns:ItemType" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="ItemType">
+  	<attribute name="routingNum" type="integer" use="required"/>
+  </complexType> 
+  
+	<complexType name="DerivedItemType_1">
+		<complexContent>
+	      	<extension base="tns:ItemType">
+	      		<sequence>
+	      			<element name="number" type="integer" />
+	      			<element name="name" type="string" />
+	      		</sequence>	      
+	      	</extension>
+		</complexContent>
+	  </complexType>
+	  
+	  <complexType name="DerivedItemType_2">
+			<complexContent>
+		      	<extension base="tns:ItemType">
+		      		<sequence>
+		      			<element name="number" type="integer" />
+		      			<element name="name" type="string" />
+		      			<element name="manufacturer" type="string"/>
+		      		</sequence>
+		      	</extension>
+		</complexContent>
+	  </complexType>
+	      
+</schema>

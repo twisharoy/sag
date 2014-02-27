@@ -1,0 +1,284 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--<xsd:import namespace="http://www.w3schools.com/schema"/>-->
+  <!-- <include
+    schemaLocation="http://www.example.com/schemas/address.xsd"/> -->
+
+  <xsd:annotation>
+    <!--<xsd:appInfo>W3Schools Note</xsd:appInfo>-->
+    <xsd:documentation xml:lang="en">
+     Purchase order schema for Example.com.
+     Copyright 2000 Example.com. All rights reserved.
+    </xsd:documentation>
+  </xsd:annotation>
+
+  <!-- <xs:field xpath="@userID"/> -->
+  
+  
+  <xsd:element name="purchaseOrder" type="PurchaseOrderType"/>
+
+  <xsd:element name="comment" type="xsd:string"/>
+
+  <xsd:complexType name="PurchaseOrderType">
+    <xsd:sequence>
+      <xsd:element name="shipTo" type="USAddress"/>
+      <xsd:element name="billTo" type="USAddress"/>
+      <xsd:choice>
+        <xsd:group ref="shipAndBill"/>
+        <xsd:element name="singleUSAddress" type="USAddress"/>
+      </xsd:choice>
+      <xsd:element ref="comment" minOccurs="0"/>
+      <xsd:element name="items_unique" type="Items">
+        <xsd:unique name="partNumAndName">
+          <xsd:selector xpath="item"/>
+          <xsd:field    xpath="@partNum"/>
+          <xsd:field    xpath="productName"/>
+        </xsd:unique>
+      </xsd:element>
+
+      <xsd:element name="items"  type="Items"/>
+      <xsd:element name="price" type="listOfMyIntType"/>
+      <xsd:element ref="internationalPrice"/>
+      <xsd:element name="letterBody">
+        <xsd:complexType mixed="true">
+          <xsd:sequence>
+            <xsd:element name="salutation">
+              <xsd:complexType mixed="true">
+                <xsd:sequence>
+                  <xsd:element name="name" type="xsd:string"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="quantity"    type="xsd:positiveInteger"/>
+            <xsd:element name="productName" type="xsd:string"/>
+            <xsd:element name="shipDate"    type="xsd:date" minOccurs="0"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element ref="localPrice"/>
+      <xsd:element name="anything" type="xsd:anyType"/>
+    </xsd:sequence>
+    <xsd:attribute name="orderDate" type="xsd:date"/>
+  </xsd:complexType>
+  
+  <xsd:complexType name="QuoteOrderType">
+    <xsd:all>
+      <xsd:element name="shipTo" type="xsd:string"/>
+      <xsd:element name="billTo" type="xsd:string"/>
+      <xsd:element ref="comment" minOccurs="0"/>
+      <xsd:element name="items"  type="xsd:string"/>
+    </xsd:all>
+    <xsd:attribute name="orderDate" type="xsd:date"/>
+  </xsd:complexType>
+  
+  <xsd:group name="shipAndBill">
+    <xsd:sequence>
+      <xsd:element name="shipTo" type="USAddress"/>
+      <xsd:element name="billTo" type="USAddress"/>
+    </xsd:sequence>
+  </xsd:group>
+
+  <xsd:complexType name="USAddress">
+    <xsd:sequence>
+      <xsd:element name="name"   type="xsd:string"/>
+      <xsd:element name="street" type="xsd:string"/>
+      <xsd:element name="city"   type="xsd:string"/>
+      <xsd:element name="state"  type="SixUSStates"/>
+      <xsd:element name="zip"    type="xsd:decimal"/>
+      <xsd:element name="zipcode"    type="zipUnion"/>
+    </xsd:sequence>
+    <xsd:attribute name="country" type="xsd:NMTOKEN"
+                   fixed="US"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="Items">
+    <xsd:sequence>
+      <xsd:element name="item" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="productName" type="xsd:string"/>
+            <xsd:element name="quantity">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:positiveInteger">
+                  <xsd:maxExclusive value="100"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="USPrice"  type="xsd:decimal"/>
+            <xsd:element ref="comment"   minOccurs="0"/>
+            <xsd:element name="shipDate" type="xsd:date" minOccurs="0" nillable="true"/>
+          </xsd:sequence>
+          <xsd:attribute name="partNum" type="SKU" use="required"/>
+          <!-- add weightKg and shipBy attributes -->
+          <xsd:attributeGroup ref="ItemDelivery"/>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:attributeGroup name="ItemDelivery">
+    <xsd:attribute name="weightKg" type="xsd:decimal"/>
+    <xsd:attribute name="shipBy">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="air"/>
+          <xsd:enumeration value="land"/>
+          <xsd:enumeration value="any"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+  </xsd:attributeGroup>
+
+
+  <!-- Stock Keeping Unit, a code for identifying products -->
+  <xsd:simpleType name="SKU">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\d{3}-[A-Z]{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- added-->
+  <xsd:simpleType name="myInteger">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="10000"/>
+      <xsd:maxInclusive value="99999"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="USState">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AK"/>
+      <xsd:enumeration value="AL"/>
+      <xsd:enumeration value="AR"/>
+      <xsd:enumeration value="BA"/>
+      <xsd:enumeration value="BE"/>
+      <xsd:enumeration value="BY"/>
+      <xsd:enumeration value="CA"/>
+      <xsd:enumeration value="CL"/>
+      <xsd:enumeration value="CY"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="listOfMyIntType">
+    <xsd:list itemType="myInteger"/>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="USStateList">
+    <xsd:list itemType="USState"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="SixUSStates">
+    <xsd:restriction base="USStateList">
+      <xsd:length value="6"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="zipUnion">
+    <xsd:union memberTypes="USState listOfMyIntType"/>
+  </xsd:simpleType>
+  
+  <xsd:element name="internationalPrice">
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:extension base="xsd:decimal">
+          <xsd:attribute name="currency" type="xsd:string"/>
+        </xsd:extension>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="localPrice">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">
+           element declared with anonymous type
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:annotation>
+        <xsd:documentation xml:lang="en">
+             empty anonymous type with 2 attributes
+        </xsd:documentation>
+      </xsd:annotation>
+      <xsd:attribute name="currency" type="xsd:string"/>
+      <xsd:attribute name="value"    type="xsd:decimal"/>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="eacute" type="xsd:token" fixed="&#xE9;"/>
+  
+  <xsd:element name="keyEx" type="xsd:string" >
+    <xsd:key name="pNumKey">
+      <xsd:selector xpath="parts/part"/>
+      <xsd:field xpath="@number"/>
+    </xsd:key>
+    <xsd:keyref name="dummy2" refer="pNumKey">
+      <xsd:selector xpath="regions/zip/part"/>
+      <xsd:field xpath="@number"/>
+    </xsd:keyref>
+  </xsd:element>
+  
+  <xsd:element name="htmlExample">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:any namespace="http://www.w3.org/1999/xhtml"
+             minOccurs="1" maxOccurs="unbounded"
+             processContents="skip"/>
+      </xsd:sequence>
+      <xsd:anyAttribute namespace="http://www.w3.org/1999/xhtml"/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:complexType name="text">
+    <xsd:complexContent mixed="true">
+      <xsd:restriction base="xsd:anyType">
+        <xsd:sequence>
+          <xsd:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <!--<xsd:attribute name="test"/>-->
+      </xsd:restriction>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <xsd:element name="employee" type="fullpersoninfo"/>
+
+  <xsd:complexType name="personinfo">
+    <xsd:sequence>
+      <xsd:element name="firstname" type="xsd:string"/>
+      <xsd:element name="lastname" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="fullpersoninfo">
+    <xsd:complexContent>
+      <xsd:extension base="personinfo">
+        <xsd:sequence>
+          <xsd:element name="address" type="xsd:string"/>
+          <xsd:element name="city" type="xsd:string"/>
+          <xsd:element name="country" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <xsd:notation name="gif" public="image/gif" system="view.exe"/>
+  <xsd:notation name="jpeg" public="image/jpeg" system="view.exe"/>
+  
+  <!--<xsd:element name="image">
+    <xsd:complexType>
+      <xsd:simpleContent>
+        <xsd:attribute name="type">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:NOTATION">
+              <xsd:enumeration value="gif"/>
+              <xsd:enumeration value="jpeg"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:attribute>
+      </xsd:simpleContent>
+    </xsd:complexType>
+  </xsd:element>-->
+
+
+
+
+</xsd:schema>

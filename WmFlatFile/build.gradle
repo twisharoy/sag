@@ -1,0 +1,13 @@
+description  = 'WmFlatFile package'
+
+dependencies {
+    compile(
+        project(':modules:is-flatfile'),
+        project(':packages:is-pkg-wmroot'),
+    )
+}
+
+jarStatic { 
+    archiveName = 'ffcore.jar'
+    from zipTree( project(':modules:is-flatfile').jar.archivePath)
+}

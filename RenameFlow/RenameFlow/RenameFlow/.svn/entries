@@ -1,0 +1,117 @@
+10
+
+dir
+27167
+svn://10.60.25.162/RenameFlow/RenameFlow/RenameFlow
+svn://10.60.25.162
+
+
+
+2014-02-20T09:05:04.975651Z
+27158
+root
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+49e584ca-1d61-4a42-a2aa-9a54e38e2cf9
+
+.project
+file
+
+
+
+
+2014-02-20T09:30:06.540000Z
+9e916d14536ca318534992154c781575
+2014-02-20T09:05:04.975651Z
+27158
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+274
+
+RenameFlow
+dir
+
+code
+dir
+
+config
+dir
+
+lib
+dir
+
+manifest.v3
+file
+
+
+
+
+2014-02-20T09:30:07.493000Z
+4cfb46fd31100bc4c59191839c1d93b0
+2014-02-20T09:05:04.975651Z
+27158
+root
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+384
+
+ns
+dir
+
+pub
+dir
+
+resources
+dir
+

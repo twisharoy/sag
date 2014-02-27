@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webMethods/trigger</value>
+  <value name="node_nsName">Automated.queueTestSuite.testCase03:triggerTest1</value>
+  <value name="node_pkg">JMSQATestHarness</value>
+  <value name="trigger_type">jms-trigger</value>
+  <record name="trigger" javaclass="com.wm.util.Values">
+    <value name="serialSuspendOnError">false</value>
+    <value name="concurrent">false</value>
+    <value name="ordering">1</value>
+    <value name="auditOption">0</value>
+    <record name="auditSettings" javaclass="com.wm.util.Values">
+      <value name="document_data">0</value>
+      <value name="startExecution">false</value>
+      <value name="stopExecution">false</value>
+      <value name="onError">true</value>
+    </record>
+    <record name="redeliveryOptions" javaclass="com.wm.util.Values">
+      <value name="max">0</value>
+      <value name="delayInterval">0</value>
+      <value name="onRedeliveryFailure">0</value>
+    </record>
+    <value name="joinTimeout">86400000</value>
+    <value name="maxConcurrentThreads">1</value>
+    <value name="inDoubtDetection">false</value>
+    <value name="resolveWithHistory">false</value>
+    <value name="resolutionHistoryTTL">7200000</value>
+    <value name="uniqueId">Kr5E+sXJBSNczTcwt9tsLKjD5LY=</value>
+    <value name="aliasName">BrokerA_NT_Q</value>
+    <Boolean name="enabled">false</Boolean>
+    <value name="prefetchSize">0</value>
+    <value name="inactiveWaitTime">3000</value>
+    <value name="batchSize">1</value>
+    <value name="acknowledgeMode">2</value>
+    <value name="includeOriginalMessage">false</value>
+    <value name="joinType">3</value>
+    <value name="executeUser">Administrator</value>
+    <array name="routingRules" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="ruleName">Rule1</value>
+        <value name="serviceName">Automated.util:countDownTarget</value>
+        <null name="filter"/>
+      </record>
+    </array>
+    <array name="destinations" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="destination">Queue2</value>
+        <null name="messageSelector"/>
+        <number name="destinationType" type="Integer">0</number>
+        <null name="durableSubscriberName"/>
+        <Boolean name="durableSubscriberNoLocal">false</Boolean>
+      </record>
+    </array>
+    <number name="totalThrottledSessions" type="Integer">0</number>
+  </record>
+</Values>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Pgn_FIN_execute_WBSValidation" targetNamespace="urn:pgn:objects:wsdl:FIN:WBSValidation:version1.0" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="urn:pgn:objects:wsdl:FIN:WBSValidation:version1.0" xmlns:typeFault="urn:pgn:objects:xmlschema:INF:FaultReturn:version1.0" xmlns:typeIn="urn:pgn:objects:xmlschema:FIN:wval.version1.0In" xmlns:typeOut="urn:pgn:objects:xmlschema:FIN:wval.version1.0Out" xmlns:typeReq="urn:pgn:objects:xmlschema:FIN:wval.version1.0" xmlns:typeRsp="urn:pgn:objects:xmlschema:FIN:wval.version1.0"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:pgn:objects:xmlschema:FIN:wval.version1.0In">
+      <xs:import namespace="urn:pgn:objects:xmlschema:FIN:wval.version1.0" schemaLocation="Pgn_FIN_WBSValidationInfo.xsd"/>
+      <xs:element name="validate_WBS" type="typeReq:WvalRequestMsg_Type"/>
+    </xs:schema>
+    <xs:schema targetNamespace="urn:pgn:objects:xmlschema:FIN:wval.version1.0Out">
+      <xs:import namespace="urn:pgn:objects:xmlschema:FIN:wval.version1.0" schemaLocation="Pgn_FIN_WBSValidationInfo.xsd"/>
+      <xs:element name="validate_WBSOutputElement" type="typeRsp:WvalRequestResponseMsg_Type"/>
+    </xs:schema>
+    <xs:schema>
+      <xs:import namespace="urn:pgn:objects:xmlschema:INF:FaultReturn:version1.0" schemaLocation="Pgn_INF_FaultReturn.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="validate_WBSInput">
+    <wsdl:part element="typeIn:validate_WBS" name="validate_WBSElement"/>
+  </wsdl:message>
+  <wsdl:message name="FaultReturnMsg">
+    <wsdl:part element="typeFault:ServiceError" name="FaultReturnMsg"/>
+  </wsdl:message>
+  <wsdl:message name="validate_WBSOutput">
+    <wsdl:part element="typeOut:validate_WBSOutputElement" name="validate_WBSOutputElement"/>
+  </wsdl:message>
+  <wsdl:portType name="Pgn_FIN_execute_WBSValidation">
+    <wsdl:operation name="validate_WBS">
+      <wsdl:input message="tns:validate_WBSInput" name="validate_WBSInput"/>
+      <wsdl:output message="tns:validate_WBSOutput" name="validate_WBSOutput"/>
+      <wsdl:fault message="tns:FaultReturnMsg" name="FaultReturnMsg"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Pgn_FIN_execute_WBSValidation_Binding" type="tns:Pgn_FIN_execute_WBSValidation">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="validate_WBS">
+      <soap:operation soapAction="urn:pgn:objects:wsdl:FIN:WBSValidation:version1.0/validate_WBSInput" style="document"/>
+      <wsdl:input name="validate_WBSInput">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="validate_WBSOutput">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="FaultReturnMsg">
+        <soap:fault name="FaultReturnMsg" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Pgn_FIN_execute_WBSValidation">
+    <wsdl:port binding="tns:Pgn_FIN_execute_WBSValidation_Binding" name="Pgn_FIN_execute_WBSValidation_Port">
+      <soap:address location="https://lxc0008b.oak.zone1.progress-energy.com:2443/ws/PgnDLNTest.webServices.provider:Pgn_FIN_execute_WBSValidation"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: mom.is.pkg.default
+Implementation-Version: 9.6.0.0000-0294
+

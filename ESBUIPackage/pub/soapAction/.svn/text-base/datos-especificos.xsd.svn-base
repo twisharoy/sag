@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 U (http://www.xmlspy.com) by mcid (mcid) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:v="http://www.red.es/padron" xmlns="http://www.map.es/scsp/esquemas/datosespecificos" targetNamespace="http://www.map.es/scsp/esquemas/datosespecificos" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.red.es/padron" schemaLocation="VolanteEmpadronamiento.xsd"/>
+	<xs:element name="DatosEspecificos" type="DatosEspecificos">
+		<xs:annotation>
+			<xs:documentation>Datos Especificos del proyecto comunicación de domicilio</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="DatosVolante">
+		<xs:annotation>
+			<xs:documentation>Datos necesarios para realizar el comunicación de domicilio. Generados por el Padron Municipal</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="v:VolanteEmpadronamiento"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DatoAuxiliar">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Campo" type="xs:string"/>
+				<xs:element name="Valor" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Id_Transaccion" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>Identificador de la transacción que identifica la petición por todo es sistema.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="DescripcionMunicipioVolante">
+		<xs:annotation>
+			<xs:documentation>Nombre del Municipio. Para verificar el código de municipio por los organismo que no utilizan códigos de municipio INE</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:maxLength value="50"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:complexType name="DatosEspecificos">
+		<xs:annotation>
+			<xs:documentation>Datos Especificos, para esta solicitud, o sea. el certificado de Volante de Empadronamiento y demás datos necesarios</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element ref="DatosVolante" minOccurs="0"/>
+			<xs:element name="DatosAdicionalesVolante" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Datos complementarios al Volante.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="DescripcionMunicipioVolante" minOccurs="0"/>
+						<xs:element ref="Id_Transaccion" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DatosAuxiliares" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Lista de campos auxiliares a utilizar en caso necesario. </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="DatoAuxiliar" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
